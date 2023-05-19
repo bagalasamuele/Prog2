@@ -31,16 +31,17 @@ public class Matita {
 	public static final int maxStelo = 200; // max. lunghezza matita (mm)
 	public static final int maxPunta = 5; // max. lunghezza punta (mm)
 
-	int punta;
-	int stelo;
+	private int punta;
+	private int stelo;
 
 	// Attributi non statici (proprii di ogni istanza) stelo e punta
 	// Notare l'uso di attributi privati
 
 	/** Metodo costruttore */
 	public Matita(int lunghezza) {
-		assert this.stelo > maxStelo;
-		this.punta = maxPunta;
+		assert minStelo<=stelo && stelo<=maxStelo:
+		"stelo matita non accettabile:" + stelo;
+		this.punta = Matita.maxPunta;
 		this.stelo = lunghezza;
 	}
 
@@ -49,11 +50,11 @@ public class Matita {
 	 * punta di 1 mm. Restituisce false se la punta e' finita.
 	 */
 	public boolean disegna() {
-		if (this.punta > 1) {
-			this.stelo--;
-			this.punta++;
+		if (this.punta > 0) {
+			this.punta--;
 			return true;
-		} else
+		}
+		else
 			return false;
 
 	}
@@ -64,15 +65,13 @@ public class Matita {
 	 */
 	public boolean tempera() {
 		if (this.stelo > minStelo) {
-			if (this.punta != maxPunta) {
-				this.stelo = this.stelo - 1;
-				this.punta = this.punta + 1;
-			} else
-				this.stelo = this.stelo - 1;
+			this.stelo--;
+			this.punta = Math.min(this.punta + 1, maxPunta);
 			return true;
-		} else
+		} 
+		else
 			return false;
-	}
+	} 
 
 	/** Metodi getters per stelo e punta */
 	public int getStelo() {

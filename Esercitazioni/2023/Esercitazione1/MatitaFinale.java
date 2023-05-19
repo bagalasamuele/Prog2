@@ -1,5 +1,5 @@
 // Matita.java
-public class Matita {
+public class MatitaFinale {
 	// Attributi statici (comuni a tutte le istanze di Matita) e final (non modificabili)
 	public static final int minStelo = 10;  //min. lunghezza matita (mm)
 	public static final int maxStelo = 200; //max. lunghezza matita (mm)
@@ -11,7 +11,7 @@ public class Matita {
 	private int punta; // 0 <= punta <= maxPunta 
 	
 	/** Metodo costruttore */
-	public Matita(int stelo) {
+	public MatitaFinale(int stelo) {
 		assert minStelo<=stelo && stelo<=maxStelo:
 		"stelo matita non accettabile:" + stelo;
 		this.stelo = stelo;

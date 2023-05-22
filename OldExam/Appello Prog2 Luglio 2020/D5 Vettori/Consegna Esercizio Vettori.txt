@@ -1,0 +1,12 @@
+Salvate tutto in un solo file Ex.java.
+Completate il corpo del primo metodo che trovate:
+public > boolean f(T v[][], T x)
+
+1) In modo che restituisca true se trova almeno un elemento in v minore di x,  e false altrimenti. 
+
+2) Confrontate gli elementi di T usando x.compareTo(y) (supponete che x non sia null). 
+
+3) Non modificate altro che il corpo del primo metodo.
+
+Eseguite il main della classe Ex come test per la risposta. Non definite il vostro metodo per casi sui test.
+Ricopiate nel Quiz e fate verificare di nuovo le risposte dal Quiz, se passano il secondo controllo inviate tutto e terminate, altrimenti correggete gli errori.

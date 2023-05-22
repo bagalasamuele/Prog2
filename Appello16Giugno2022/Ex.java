@@ -125,9 +125,7 @@ class List {
         Node pointer = first;
         int numberOfUpZero = 0;
         while (pointer != null) {
-            if (pointer.getElem() >= 0) {
-                numberOfUpZero++;
-            }
+          
             pointer = pointer.getNext();
         }
         if (numberOfUpZero % 2 == 0) {

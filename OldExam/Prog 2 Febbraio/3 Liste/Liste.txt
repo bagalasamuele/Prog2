@@ -1,0 +1,5 @@
+
+    Salvate tutto in un solo file Ex.java.
+    Completate il metodo void g() in List, in modo che g() faccia cominciare la lista dall'ultimo elemento dispari che compare nella lista. Se g() non trova un elemento dispari allora lascia la lista invariata. Non modificate altro che il metodo. Per modificare la lista riassegnate l'attributo con il primo elemento della lista.
+    Eseguite il main della classe Ex come test per la risposta. Non definite il vostro metodo per casi sui test.
+    Ricopiate nel Quiz e fate verificare di nuovo le risposte dal Quiz, se passano il controllo del Quiz inviate tutto e terminate, altrimenti correggete gli errori. Normalmente i test devono essere tutti giusti perché la soluzione abbia valore.  

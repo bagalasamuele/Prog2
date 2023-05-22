@@ -1,0 +1,15 @@
+Salvate tutto in un solo file Ex.
+
+1) Completate il corpo del metodo boolean ok(Node v, int x) in modo che restituisca vero se e solo se eseguire metodo(v,x) non restituisce nè eccezioni nè valori NaN nè infinity.
+
+2) Non modificate altro.
+
+3) Eseguite il main di Ex come test per la risposta.
+
+Ricopiate nel Quiz e fate verificare di nuovo le risposte dal Quiz, se passano il secondo controllo inviate tutto e terminate, altrimenti correggete gli errori.
+
+
+Definizione di metodo(v,x):
+public static void metodo(Node p, int x)
+
+  {for(  ;x>=0;x--) {p.setElem(x);p=p.getNext()};}

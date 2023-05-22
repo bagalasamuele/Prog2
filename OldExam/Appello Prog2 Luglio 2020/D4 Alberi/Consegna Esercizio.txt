@@ -1,0 +1,17 @@
+Salvate tutto in un solo file Ex.java.
+Completate il metodo Tree <T> k(T x, T z) in Leaf <T> e Branch <T> come segue. 
+
+1) k(x,z) scambia la parte sinistra e destra dell'albero se elem soddisfa:  (elem minore di x) oppure (elem uguale a z),
+e scambia la parte sinistra e destra di ogni sottoalbero in cui la condizione vale.
+
+2) k(x,z) non fa nulla nei nodi in cui la condizione non vale. 
+
+3) Terminate restituendo l'indirizzo "this" dell'albero (l'indirizzo non cambia mai).
+
+4) Usate a.compareTo(b) per confrontare a,b in T e supponete che gli elementi dell'albero e x,z non siano null.
+
+5) Usate una definizione ricorsiva. Non modificate altro. Non usate "for" nè "while".
+
+Eseguite il main della classe Ex come test per la risposta. Non definite il vostro metodo per casi sui test.
+Ricopiate nel Quiz e fate verificare di nuovo le risposte dal Quiz, se passano il controllo del Quiz inviate tutto e terminate, altrimenti correggete gli errori. 
+Normalmente i test devono essere tutti giusti perché la soluzione abbia valore.

@@ -1,0 +1,15 @@
+Salvate tutto in un solo file Ex.java.
+
+Leggete attentamente la definizione del metodo double l(double v[]). 
+
+1) Completate il corpo del metodo boolean ok(double v[]) in modo che restituisca vero se e solo se eseguire il metodo double l(double v[]) completerebbe senza sollevare eccezioni, nè restituendo valori inf, NaN.
+
+2) Non usate 'catch', ma fornite un algoritmo che decida quando eseguire metodo non restituisce eccezioni/inf/NaN.
+
+Non modificate altro che il corpo di ok.
+
+Eseguite il main della classe Ex come test per la risposta. Non definite il vostro metodo per casi sui test.
+
+Ricopiate nel Quiz e fate verificare di nuovo le risposte dal Quiz, se passano il secondo controllo inviate tutto e terminate, altrimenti correggete gli errori.
+
+Normalmente i test devono essere tutti giusti perché la soluzione abbia valore.

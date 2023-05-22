@@ -1,0 +1,5 @@
+
+    Salvate tutto in un solo file Ex.java.
+    Sia v un vettore di vettori-riga di interi, con tutte le righe di due o più elementi. Completate il metodo int f(int v[][]) nella classe Ex.  Per ogni vettore-riga v[i] di v, il metodo f controlla se v[i] è ordinato rispetto alla relazione <=. f restituisce il numero dei vettori-riga che NON sono ordinati (non contate una riga non ordinata due volte). Non modificate altro.
+    Eseguite il main della classe Ex come test per la risposta. Non definite il vostro metodo per casi sui test.
+    Ricopiate nel Quiz e fate verificare di nuovo le risposte dal Quiz, se passano il secondo controllo inviate tutto e terminate, altrimenti correggete gli errori.

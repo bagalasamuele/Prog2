@@ -1,0 +1,9 @@
+Salvate tutto in un solo file Ex.
+
+1) Completate il corpo del metodo Node rev(Node p, Node q) in modo che fornisca la lista p in ordine inverso seguita dalla lista q.
+
+2) Non modificate altro che il corpo del metodo.
+
+3) Eseguite il main della classe Ex come test per la risposta.
+
+Ricopiate nel Quiz e fate verificare di nuovo le risposte dal Quiz, se passano il secondo controllo inviate tutto e terminate, altrimenti correggete gli errori.

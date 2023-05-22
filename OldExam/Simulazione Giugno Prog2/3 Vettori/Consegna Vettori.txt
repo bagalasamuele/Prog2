@@ -1,0 +1,9 @@
+Salvate tutto in un solo file Ex.
+
+1) Completate il metodo public static >boolean sym(T v[][]) nella classe Ex in modo che risponda vero se e solo se v è una matrice (ogni riga ha lunghezza il numero delle righe) ed è simmetrica.
+
+2) Usate x.compareTo(y) e supponete che ogni elemento della matrice non sia null. Non modificate altro.
+
+3) Eseguite il main di Ex come test per la risposta.
+
+Ricopiate nel Quiz e fate verificare di nuovo le risposte dal Quiz, se passano il secondo controllo inviate tutto e terminate, altrimenti correggete gli errori.

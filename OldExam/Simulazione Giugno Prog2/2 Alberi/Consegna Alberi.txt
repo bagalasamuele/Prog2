@@ -1,0 +1,9 @@
+Salvate tutto in un solo file Ex.
+
+1) Completate il metodo int height() in Leaf, Branch in modo che conti il numero di livelli che contengono elementi (che non contengono soltanto foglie) in un albero generico con elementi di tipo T.
+
+2) Non modificate altro.
+
+3) Eseguite il main di Ex come test per la risposta.
+
+Ricopiate nel Quiz e fate verificare di nuovo le risposte dal Quiz, se passano il secondo controllo inviate tutto e terminate, altrimenti correggete gli errori.se passano il secondo controllo inviate tutto e terminate, altrimenti correggete gli errori.

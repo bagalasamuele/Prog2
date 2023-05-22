@@ -1,0 +1,5 @@
+
+    Salvate tutto in un solo file Ex.java.
+    Completate il metodo Tree <T> f(T x, T z) in Leaf <T> e Branch <T> in modo che rimpiazzi un albero con una foglia (cioè con l'unico elemento di tipo Leaf <T> ) se vale:  (elem maggiore di x) e (elem minore di z), altrimenti riassegni la parte sinistra e destra dell'albero con il valore restituito da f(x,z) su di esse.  Terminate restituendo l'indirizzo aggiornato dell'albero. Usate a.compareTo(b) per confrontare a,b in T e supponete che gli elementi dell'albero e x, z non siano null. Usate una definizione ricorsiva. Non modificate altro. Non usate "for" nè "while".
+    Eseguite il main della classe Ex come test per la risposta. Non definite il vostro metodo per casi sui test.
+    Ricopiate nel Quiz e fate verificare di nuovo le risposte dal Quiz, se passano il controllo del Quiz inviate tutto e terminate, altrimenti correggete gli errori. Normalmente i test devono essere tutti giusti perché la soluzione abbia valore.

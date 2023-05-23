@@ -15,7 +15,6 @@ public class Disegno extends JFrame {
    public Disegno(Figura[] figure) {
       super(); // Assegnamo tutti i parametri di un JFrame
       this.figure = figure; // Aggiungiamo un array di figure
-
    }
 
    // OVERRIDE: ridefiniamo il metodo paint di JFrame

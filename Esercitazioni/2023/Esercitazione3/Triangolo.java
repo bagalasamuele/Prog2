@@ -16,7 +16,7 @@ public class Triangolo extends Figura {
         this.base = base;
     }
 
-    // @Override
+    @Override
     public void draw(Graphics g) {
         g.setColor(Color.red);
         g.drawLine((x - base) / 2, y, x + base / 2, y); // base triangolo

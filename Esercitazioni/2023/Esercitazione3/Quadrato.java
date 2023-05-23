@@ -13,9 +13,9 @@ public class Quadrato extends Figura {
 
   // COSTRUTTORE di un quadrato
   public Quadrato(int x, int y, int lato, Color color) {
-    this.lato = lato;
     this.x = x;
     this.y = y;
+    this.lato = lato;
     this.color = color;
   }
 
@@ -23,10 +23,10 @@ public class Quadrato extends Figura {
     // g.setLocation(x,y);
     g.setColor(color);
     int m = lato / 2;
-    g.drawLine( x+m, y+m, x-m, y+m); //disegno primo lato su g
-    g.drawLine( x-m, y+m, x-m, y-m); //disegno secondo lato su g
-    g.drawLine( x-m, y-m, x+m, y-m); //disegno terzo lato su g
-    g.drawLine( x+m, y-m, x+m, y+m); //disegno quarto lato su g
+    g.drawLine(x + m, y + m, x - m, y + m); // disegno primo lato su g
+    g.drawLine(x - m, y + m, x - m, y - m); // disegno secondo lato su g
+    g.drawLine(x - m, y - m, x + m, y - m); // disegno terzo lato su g
+    g.drawLine(x + m, y - m, x + m, y + m); // disegno quarto lato su g
   }
 
 }

@@ -39,44 +39,37 @@ public class Disegno extends JFrame {
 
    public static Color getRandomColor() {
       Random rand = new Random();
-
       int r = rand.nextInt(255 - 0) + 0;
       int g = rand.nextInt(255 - 0) + 0;
       int b = rand.nextInt(255 - 0) + 0;
       Color randomColor = new Color(r, g, b);
-
       return randomColor;
    }
 
    public static void main(String[] args) {
-      int m = 70, n = 90;
-      Figura[] figure = new Figura[n];
- 
-      // Array di n figure: all’inizio ogni figura vale null
-      // Assegnamo le n figure: scegliamo m quadrati e (n-m) cerchi
-      // Possiamo farlo perche' quadrati e cerchi sono particolari figure
-      for (int i = 0; i < m; i++){
-        
-         Color randomColor = getRandomColor();
-         figure[i] = new Quadrato(30,12,i * 7, randomColor);
+      int n = 20;
+      int i;
+      Figura[] figure = new Figura[3 * n];
+      Color randomColor = getRandomColor();
+
+      for (i = 0; i < n; ++i) {
+         randomColor = getRandomColor();
+         figure[i] = new Quadrato(0, 0, i * 7, randomColor);
       }
-      for (int i = m; i < n; i++)
-         figure[i] = new Cerchio(i * 3);
+      for (i = n; i < 2 * n; ++i) {
+         randomColor = getRandomColor();
+         figure[i] = new Cerchio(0, 0, i * 4, randomColor);
+      }
+      for (i = 2 * n; i < 3 * n; ++i) {
+         // randomColor = getRandomColor();
+         figure[i] = new Triangolo(0, 0, i * 3, 11 * 10+i);
 
-      // Definiamo un disegno con array di figure proprio “figure"
-      Disegno frame = new Disegno(figure);// Jframe con array di figure
-
-      // ESEMPI DI EREDITARIETA' (SENZA OVERRIDE) DALLA CLASSE JFRAME //Scegliamo di
-      // terminare la figura quando ne chiudiamo la finestra //(il metodo
-      // setDefaultCloseOperation viene ereditato da JFrame)
-      // frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      // Scegliamo la dimensione della finestra grafica:
-      // (il metodo setSize viene ereditato da JFrame)
+      }
+      Disegno frame = new Disegno(figure);
+      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       frame.setSize(600, 600);
       frame.setVisible(true);
-      // rende il disegno visibile, inviando il metodo // paint all’oggetto frame
-      // insieme con un oggetto grafico g: //(il metodo setVisible viene ereditato da
-      // JFrame) frame.setVisible(true);
    }
 
-}
+   }
+

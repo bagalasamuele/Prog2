@@ -9,15 +9,12 @@ class Ex {
         Node aux;
 
         for (newNode = q; newNode != null; newNode = newNode.getNext()) {
-            System.out.println(newNode.getElem());
-            aux = p.getNext();
-            p.setNext(q);
-            q = p;
-            p = aux;
+            aux = p.getNext();  //Ottengo da nodo ausiliare in nodo successivo di p , e lo salvo 
+            p.setNext(q);  //Assegno come successivo a P il nodo q 
+            q = p;  //Riassegno a q tutto p
+            p = aux; //e p diventa il nodo ausiriale successivo a p 
         }
-
         // System.out.println(p.getElem());
-
         return q;
     }
 
@@ -34,10 +31,9 @@ class Ex {
     }
 
     public static void check(String msg, String a, String b) {
-        if (a.equals(b)) {
+        if (a.equals(b))
             System.out.println(msg + a + " OK");
-            System.out.println("sono uguali "+ a);
-        } else
+        else
             System.out.println(msg + a + " INSTEAD OF " + b);
     }
 

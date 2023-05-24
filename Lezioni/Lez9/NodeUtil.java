@@ -60,6 +60,23 @@ public class NodeUtil {
         return numberOfElem;
     }
 
+    public static int length_rec(Node p) {
+        if (p == null)
+            return 0;
+        else
+            return 1 + length_rec(p.getNext());
+    }
+
+    public static int sum(Node p) {
+        Node aux = p;
+        int sumElement = 0;
+        while (aux != null) {
+            sumElement = sumElement + aux.getElem();
+            aux = aux.getNext();
+        }
+        return sumElement;
+    }
+
     public static class Node {
         private int elem;
         private Node next;
@@ -108,13 +125,11 @@ public class NodeUtil {
         p = new Node(10, p);
         System.out.println("Lista p:");
         scriviOutput(p);
+        System.out.println("---------------------");
         System.out.println("1. length(p) = " + length(p));
-
-        // System.out.println("---------------------");
-        // System.out.println("1. length(p) = " + length(p));
-        // System.out.println("1. length_rec(p) = " + length_rec(p));
-        // System.out.println("---------------------");
-        // System.out.println("2. sum(p) = " + sum(p));
+        System.out.println("1. length_rec(p) = " + length_rec(p));
+        System.out.println("---------------------");
+        System.out.println("2. sum(p) = " + sum(p));
         // System.out.println("2. sum_rec(p) = " + sum_rec(p));
         // System.out.println("---------------------");
         // System.out.println("3. max(p) = " + max(p));

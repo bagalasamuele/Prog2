@@ -37,13 +37,30 @@
 // equals(q,q) vale true, se p = {10,20,30,40,30,20,10} allora
 // equals(p,q) vale false.
 
+import org.w3c.dom.Node;
+
 public class NodeUtil {
 
     public static void scriviOutput(Node q) {
+        Node aux = q;
+        while (aux.getNext() != null) {
+            System.out.print(aux.getElem());
+            aux = aux.getNext();
+        }
 
     }
 
-    public class Node {
+    public static int length(Node q) {
+        Node aux = q;
+        int numberOfElem = 0;
+        while (aux.getNext() != null) {
+            numberOfElem++;
+            aux = aux.getNext();
+        }
+        return numberOfElem;
+    }
+
+    public static class Node {
         private int elem;
         private Node next;
 
@@ -91,32 +108,34 @@ public class NodeUtil {
         p = new Node(10, p);
         System.out.println("Lista p:");
         scriviOutput(p);
-        System.out.println("---------------------");
         System.out.println("1. length(p) = " + length(p));
-        System.out.println("1. length_rec(p) = " + length_rec(p));
-        System.out.println("---------------------");
-        System.out.println("2. sum(p) = " + sum(p));
-        System.out.println("2. sum_rec(p) = " + sum_rec(p));
-        System.out.println("---------------------");
-        System.out.println("3. max(p) = " + max(p));
-        System.out.println("3. max_rec(p) = " + max_rec(p));
-        System.out.println("---------------------");
-        System.out.println("4. member(p,30) = " + member(p, 30));
-        System.out.println("4. member(p,50) = " + member(p, 50));
-        System.out.println("4. member_rec(p,30) = " + member_rec(p, 30));
-        System.out.println("4. member_rec(p,50) = " + member_rec(p, 50));
-        System.out.println("---------------------");
-        System.out.println("5. toString(q) = " + toString(q));
-        System.out.println("5. toString(p) = " + toString(p));
 
-        System.out.println("---------------------");
-        System.out.println("6. sorted(q) = " + sorted(q));
-        System.out.println("6. sorted(p) = " + sorted(p));
-        System.out.println("---------------------");
-        System.out.println("7. equals(p,q) = " + equals(p, q));
-        System.out.println("7. equals(p,p) = " + equals(p, p));
-        System.out.println("7. equals(q,q) = " + equals(q, q));
-        System.out.println("7. equals(q,p) = " + equals(q, p));
+        // System.out.println("---------------------");
+        // System.out.println("1. length(p) = " + length(p));
+        // System.out.println("1. length_rec(p) = " + length_rec(p));
+        // System.out.println("---------------------");
+        // System.out.println("2. sum(p) = " + sum(p));
+        // System.out.println("2. sum_rec(p) = " + sum_rec(p));
+        // System.out.println("---------------------");
+        // System.out.println("3. max(p) = " + max(p));
+        // System.out.println("3. max_rec(p) = " + max_rec(p));
+        // System.out.println("---------------------");
+        // System.out.println("4. member(p,30) = " + member(p, 30));
+        // System.out.println("4. member(p,50) = " + member(p, 50));
+        // System.out.println("4. member_rec(p,30) = " + member_rec(p, 30));
+        // System.out.println("4. member_rec(p,50) = " + member_rec(p, 50));
+        // System.out.println("---------------------");
+        // System.out.println("5. toString(q) = " + toString(q));
+        // System.out.println("5. toString(p) = " + toString(p));
+
+        // System.out.println("---------------------");
+        // System.out.println("6. sorted(q) = " + sorted(q));
+        // System.out.println("6. sorted(p) = " + sorted(p));
+        // System.out.println("---------------------");
+        // System.out.println("7. equals(p,q) = " + equals(p, q));
+        // System.out.println("7. equals(p,p) = " + equals(p, p));
+        // System.out.println("7. equals(q,q) = " + equals(q, q));
+        // System.out.println("7. equals(q,p) = " + equals(q, p));
     }
 }
 // Qui deve esserci la parentesi di chiusura della classe NodeUtil

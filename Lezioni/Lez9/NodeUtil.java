@@ -43,17 +43,17 @@ public class NodeUtil {
 
     public static void scriviOutput(Node q) {
         Node aux = q;
-        while (aux.getNext() != null) {
-            System.out.print(aux.getElem());
+        // Importante controllare che l'elemento attuale sia nullo, non il successivo
+        while (aux != null) {
+            System.out.println(aux.getElem());
             aux = aux.getNext();
         }
-
     }
 
     public static int length(Node q) {
         Node aux = q;
         int numberOfElem = 0;
-        while (aux.getNext() != null) {
+        while (aux != null) {
             numberOfElem++;
             aux = aux.getNext();
         }

@@ -77,6 +77,13 @@ public class NodeUtil {
         return sumElement;
     }
 
+    public static int sum_rec(Node p){
+        if(p == null)
+            return 0;
+        else 
+            return p.getElem() + sum_rec(p.getNext());
+    }
+
     public static class Node {
         private int elem;
         private Node next;
@@ -130,7 +137,7 @@ public class NodeUtil {
         System.out.println("1. length_rec(p) = " + length_rec(p));
         System.out.println("---------------------");
         System.out.println("2. sum(p) = " + sum(p));
-        // System.out.println("2. sum_rec(p) = " + sum_rec(p));
+        System.out.println("2. sum_rec(p) = " + sum_rec(p));
         // System.out.println("---------------------");
         // System.out.println("3. max(p) = " + max(p));
         // System.out.println("3. max_rec(p) = " + max_rec(p));

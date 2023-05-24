@@ -144,6 +144,21 @@ public class NodeUtil {
         return true;
     }
 
+    public static boolean equals(Node p, Node q) {
+        if (length(p) != length(q))
+            return false;
+        else {
+            while (p != null) {
+                if (p.getElem() != q.getElem())
+                    return false;
+                p = p.getNext();
+                q = q.getNext();
+            }
+        }
+
+        return true;
+    }
+
     public static class Node {
         private int elem;
         private Node next;

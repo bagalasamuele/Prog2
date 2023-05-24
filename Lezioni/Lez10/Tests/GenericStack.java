@@ -4,15 +4,16 @@ public class GenericStack<T> {
     public GenericStack() {
         first = null;
     }
-public void push(GenericNode<T> newNode){
-    GenericNode<T> aux;
-    aux = first;
-    first = newNode;
-    first.setNext(aux);
-    //first = new GenericNode<>(newNode, first); short command if you want to add only elem
-}
 
-
+    public void push(T elem) {
+        // If you want to add a Node
+        // GenericNode<T> aux;
+        // aux = first;
+        // first = newNode;
+        // first.setNext(aux);
+        first = new GenericNode<>(elem, first);
+        // only elem
+    }
 
     public String toString() {
         GenericNode<T> aux = first;

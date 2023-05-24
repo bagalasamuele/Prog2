@@ -1,4 +1,4 @@
-public static class GenericNode<T> {
+public class GenericNode<T> {
     private T elem;
     private GenericNode<T> next;
 
@@ -15,4 +15,11 @@ public static class GenericNode<T> {
         return next;
     }
 
+    public void setNext(GenericNode<T> next){
+        this.next = next;
+    }
+
+    public void setElem(T elem){
+        this.elem = elem;
+    }
 }

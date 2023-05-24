@@ -103,8 +103,14 @@ public class NodeUtil {
             return Math.max(p.getElem(), max_rec(p.getNext()));
     }
 
-    public static void member(Node p, int n) {
-
+    public static boolean member(Node p, int n) {
+        Node aux = p;
+        while (aux != null) {
+            if (aux.getElem() == n)
+                return true;
+            aux = aux.getNext();
+        }
+        return false;
     }
 
     public static class Node {

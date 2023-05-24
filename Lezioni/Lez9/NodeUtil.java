@@ -113,6 +113,15 @@ public class NodeUtil {
         return false;
     }
 
+    public static boolean member_rec(Node p, int n) {
+        if (p == null)
+            return false;
+        else if (p.getElem() == n)
+            return true;
+        else
+            return member_rec(p.getNext(), n);
+    }
+
     public static class Node {
         private int elem;
         private Node next;
@@ -172,10 +181,10 @@ public class NodeUtil {
         System.out.println("3. max_rec(p) = " + max_rec(p));
         System.out.println("---------------------");
         System.out.println("4. member(p,30) = " + member(p, 30));
-        // System.out.println("4. member(p,50) = " + member(p, 50));
-        // System.out.println("4. member_rec(p,30) = " + member_rec(p, 30));
-        // System.out.println("4. member_rec(p,50) = " + member_rec(p, 50));
-        // System.out.println("---------------------");
+        System.out.println("4. member(p,50) = " + member(p, 50));
+        System.out.println("4. member_rec(p,30) = " + member_rec(p, 30));
+        System.out.println("4. member_rec(p,50) = " + member_rec(p, 50));
+        System.out.println("---------------------");
         // System.out.println("5. toString(q) = " + toString(q));
         // System.out.println("5. toString(p) = " + toString(p));
 

@@ -132,6 +132,18 @@ public class NodeUtil {
         return s;
     }
 
+    public static boolean sorted(Node p) {
+        Node aux = p;
+        if (aux == null)
+            return true;
+        while (aux.getNext() != null) {
+            if (aux.getNext().getElem() < aux.getElem())
+                return false;
+            aux = aux.getNext();
+        }
+        return true;
+    }
+
     public static class Node {
         private int elem;
         private Node next;
@@ -198,13 +210,12 @@ public class NodeUtil {
         System.out.println("5. toString(q) = " + toString(q));
         System.out.println("5. toString(p) = " + toString(p));
         System.out.println("---------------------");
-        // System.out.println("6. sorted(q) = " + sorted(q));
-        // System.out.println("6. sorted(p) = " + sorted(p));
-        // System.out.println("---------------------");
-        // System.out.println("7. equals(p,q) = " + equals(p, q));
-        // System.out.println("7. equals(p,p) = " + equals(p, p));
-        // System.out.println("7. equals(q,q) = " + equals(q, q));
-        // System.out.println("7. equals(q,p) = " + equals(q, p));
+        System.out.println("6. sorted(q) = " + sorted(q));
+        System.out.println("6. sorted(p) = " + sorted(p));
+        System.out.println("---------------------");
+        System.out.println("7. equals(p,q) = " + equals(p, q));
+        System.out.println("7. equals(p,p) = " + equals(p, p));
+        System.out.println("7. equals(q,q) = " + equals(q, q));
+        System.out.println("7. equals(q,p) = " + equals(q, p));
     }
 }
-// Qui deve esserci la parentesi di chiusura della classe NodeUtil

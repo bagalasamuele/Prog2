@@ -96,6 +96,17 @@ public class NodeUtil {
         return max;
     }
 
+    public static int max_rec(Node p) {
+        if (p == null)
+            return 0;
+        else
+            return Math.max(p.getElem(), max_rec(p.getNext()));
+    }
+
+    public static void member(Node p, int n) {
+
+    }
+
     public static class Node {
         private int elem;
         private Node next;
@@ -152,9 +163,9 @@ public class NodeUtil {
         System.out.println("2. sum_rec(p) = " + sum_rec(p));
         System.out.println("---------------------");
         System.out.println("3. max(p) = " + max(p));
-        // System.out.println("3. max_rec(p) = " + max_rec(p));
-        // System.out.println("---------------------");
-        // System.out.println("4. member(p,30) = " + member(p, 30));
+        System.out.println("3. max_rec(p) = " + max_rec(p));
+        System.out.println("---------------------");
+        System.out.println("4. member(p,30) = " + member(p, 30));
         // System.out.println("4. member(p,50) = " + member(p, 50));
         // System.out.println("4. member_rec(p,30) = " + member_rec(p, 30));
         // System.out.println("4. member_rec(p,50) = " + member_rec(p, 50));

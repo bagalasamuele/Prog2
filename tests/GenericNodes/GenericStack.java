@@ -1,3 +1,4 @@
+package tests.GenericNodes;
 public class GenericStack<T> {
     private GenericNode<T> first;
 

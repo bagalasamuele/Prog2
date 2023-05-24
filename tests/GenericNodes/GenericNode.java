@@ -1,3 +1,4 @@
+package tests.GenericNodes;
 public class GenericNode<T> {
     private T elem;
     private GenericNode<T> next;

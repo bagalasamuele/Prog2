@@ -122,6 +122,16 @@ public class NodeUtil {
             return member_rec(p.getNext(), n);
     }
 
+    public static String toString(Node p) {
+        Node aux = p;
+        String s = "";
+        while (aux != null) {
+            s = s + aux.getElem() + " ";
+            aux = aux.getNext();
+        }
+        return s;
+    }
+
     public static class Node {
         private int elem;
         private Node next;
@@ -185,10 +195,9 @@ public class NodeUtil {
         System.out.println("4. member_rec(p,30) = " + member_rec(p, 30));
         System.out.println("4. member_rec(p,50) = " + member_rec(p, 50));
         System.out.println("---------------------");
-        // System.out.println("5. toString(q) = " + toString(q));
-        // System.out.println("5. toString(p) = " + toString(p));
-
-        // System.out.println("---------------------");
+        System.out.println("5. toString(q) = " + toString(q));
+        System.out.println("5. toString(p) = " + toString(p));
+        System.out.println("---------------------");
         // System.out.println("6. sorted(q) = " + sorted(q));
         // System.out.println("6. sorted(p) = " + sorted(p));
         // System.out.println("---------------------");

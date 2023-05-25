@@ -1,3 +1,4 @@
+package Lezioni.Lez09;
 // void scriviOutput(Node p). Stampa una lista concatenata partendo
 // dal nodo in cima alla lista andando indietro (quindi in ordine
 // inverso). Adattate il metodo per stampare una pila della Lezione

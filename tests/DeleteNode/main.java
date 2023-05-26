@@ -3,13 +3,13 @@ public class main {
 
         // List a = new List();
         List l = new List();
+
         l.insertFirst(1);
         l.insertFirst(2);
         l.insertFirst(3);
         l.insertFirst(4);
         System.out.println(l);
-        l.deleteEvenFromList();
-        l.deleteEvenFromList2();
+        l.deleteDispari();
         System.out.println(l);
 
     }

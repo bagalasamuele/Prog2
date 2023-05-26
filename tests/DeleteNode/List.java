@@ -1,5 +1,4 @@
 // Esercizio Per cancellare nodi 
-
 public class List {
     private Node first;
 
@@ -47,7 +46,7 @@ public class List {
     // Una volta attraversata tutta la lista, il metodo termina senza restituire
     // nulla, poiché la lista è stata modificata direttamente.
 
-    public void deleteEvenFromList2() {
+    public void deleteEvenFromList() {
         Node current = this.first;
         Node previous = null;
 
@@ -69,26 +68,25 @@ public class List {
         }
     }
 
-    public void deleteEvenFromList() {
-        Node prec = first;
-        Node current = null;
+    public void deleteDispari() {
+        Node current = this.first;
+        Node previous = null;
 
         while (current != null) {
-            if (current.getElem() % 2 == 0) {
-                if (prec == null) {
+            if (current.getElem() % 2 != 0) {
+                if (previous == null) {
                     // Caso in cui il nodo da eliminare è il primo della lista
                     this.first = current.getNext();
                 } else {
-                    prec.setNext(current.getNext());
-                    
+                    // Collego il nodo precedente al successivo, eliminando il nodo corrente
+                    previous.setNext(current.getNext());
                 }
             } else {
-                prec = current;
+                // Mantengo il nodo corrente come nodo precedente
+                previous = current;
             }
+            // Passo al nodo successivo
             current = current.getNext();
         }
     }
-
-    public void deleteDispari(){}
-
 }

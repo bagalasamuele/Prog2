@@ -8,7 +8,8 @@ public class main {
         l.insertFirst(3);
         l.insertFirst(4);
         System.out.println(l);
-        l.deletePari(l);
+        l.deleteEvenFromList();
+        l.deleteEvenFromList2();
         System.out.println(l);
 
     }

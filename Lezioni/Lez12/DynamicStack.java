@@ -1,12 +1,6 @@
 public class DynamicStack {
     protected Node top;
-    /*
-     * Rispetto alla classe Dynamic Stack, cambia la visibilità di top
-     * da private a protected: visibile a tutte le classi dello stesso
-     * package, e a tutte le sottoclassi, anche in package diversi. Questo
-     * perché top dovrà essere accessibile da parte dei metodi delle
-     * sottoclassi di DynamicStack che definiremo.
-     */
+
     public DynamicStack() {
         top = null;
     }

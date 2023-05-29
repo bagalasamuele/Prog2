@@ -1,4 +1,3 @@
-//DynamicStackSize.java
 public class DynamicStackSize extends DynamicStackMax {
     private int size;
 

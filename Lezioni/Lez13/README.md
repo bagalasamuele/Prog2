@@ -58,14 +58,13 @@ L'assegnazione:
 
 ```java
     int x = 10;
-double y = x;
-
+    double y = x;
 ```
 è corretta, perché un int si può considerare un double. Questo cambiamento di tipo si dice upcast (quando un oggetto si sposta da un tipo più piccolo a un tipo più grande). Un upcast è sempre accettato dal compilatore, perchè matematicamente corretto.
 Un assegnamento di natura opposta:
 ```java
     double k = 3.2;
-int y = k;
+    int y = k;
 ```
 invece NON è corretto, perché si avrebbe perdita di informazione: si perderebbe la parte decimale di k. Java permette questa perdita di informazione se il programmatore la indica esplicitamente con un'operatore di cast, che in questo caso è detto downcast (spostamento da un tipo più grande a un tipo più piccolo):
 ```java
@@ -75,7 +74,7 @@ invece NON è corretto, perché si avrebbe perdita di informazione: si perderebb
 Sappiamo che la definizione di una classe Java definisce un nuovo tipo (infatti il nome di una classe può essere il tipo di una variabile, di un parametro, di un valore di ritorno di un metodo). Quando si introduce una sottoclasse con una “extends” si introduce anche un sottotipo:
 ```java
     BottigliaConTappo extends Bottiglia {...}
-    ```
+```
 Implica, con la notazione appena vista, che:
 ```java
     BottigliaConTappo <: Bottiglia
@@ -104,7 +103,7 @@ L'ultimo assegnamento dice al compilatore di considerare un oggetto di tipo appa
 È sempre possibile fare un test con 'instanceof' per scoprire il tipo vero (corrispondente alla classe di un oggetto) prima di un downcast (vedere Lezione 13), per evitare errori a runtime:
    if (c2 instanceof BottigliaConTappo)
      // caso particolare: c2 == null --> instanceof false
-148
+
 
 BottigliaConTappo c3 = (BottigliaConTappo)c2; // downcast
 Si noti che:
@@ -112,7 +111,7 @@ Si noti che:
    c1.aperta(); // compila
    c2.aperta(); // NON compila
    c3.aperta(); // compila
-    '''
+'''
 perché il compilatore controlla se il tipo apparente di c2 corrisponde a una classe che contiene il metodo aperta() e questo è solo contenuto nella classe BottigliaConTappo.
 Con il programma che segue, facciamo qualche esperimento con instanceof, cast, binding dinamico.
 Ci ricordiamo che:

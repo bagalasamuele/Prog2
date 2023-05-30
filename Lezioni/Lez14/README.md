@@ -48,5 +48,4 @@ Per consentire una scansione veloce della lista ma senza consentire di modificar
 
 MiniIterator ha un metodo `int next()` che legge il contenuto di un puntatore e sposta il puntatore al nodo dopo, ma senza modificare i puntatori dei nodi. L’oggetto MiniIterator può essere usato per iterare la stessa operazione (per esempio: la stampa) su tutti gli elementi della lista l, senza consentire di aggiungere/togliere nodi da l. Per farlo, siamo obbligati a usare i metodi di MiniLinkedList, che modificano l’attributo size se la dimensione della lista cambia, e ci impediscono di sbagliare il valore di size.
 
-Riassumiamo con il seguente disegno:
 

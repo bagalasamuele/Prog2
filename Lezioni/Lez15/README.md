@@ -1,0 +1,5 @@
+# Lezione 15. Classi astratte di figure
+
+Lezione 15. Parte 1. Una classe Figure per il calcolo di area e perimetro. Nella Lezione 13 abbiamo visto come disegnare figure diverse usando la nozione di sottoclasse. In questa lezione consideriamo un problema simile: definire delle classi per calcolare area e perimetro delle figure geometriche: cerchi, poligoni regolari, trapezi, rettangoli eccetera. Vedremo anche una versione migliorata della stessa soluzione, utilizzando le classi astratte di Java.
+
+Ecco un’indicazione per una prima soluzione usando la nozione di sottoclasse. Dobbiamo scrivere una copia di ogni metodo statico su figure per i cerchi, i poligoni regolari eccetera. Questa molteplicità di tipi comporta degli svantaggi: per esempio, non possiamo raggruppare delle figure in un array di figure, perché le figure non hanno un tipo comune. Avremmo quindi bisogno di una sola classe Figura che le contenga tutte le classi citate (come sottoclassi), e che non contenga oggetti, oltre agli og

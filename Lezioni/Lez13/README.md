@@ -39,5 +39,5 @@ public class Mucca extends Animale{
     
 }
 
-
+```
 Downcasting: casting da una classe a una sottoclasse. E’ possibile solo se l’oggetto, a run-time, è veramente un oggetto della sottoclasse. Questo controllo è eseguito solo run-time, e viene lanciata, in caso di esito negativo, una ClassCastException.

@@ -11,3 +11,8 @@ Vediamo ora l’esempio di una classe `Persona` con due metodi uguali di convers
 Nel caso di `toString()`, il metodo usato dipende dalla sottoclasse a cui appartiene una data persona, mentre nel caso di `nomeToString()`, applichiamo sempre il metodo della classe `Persona`.
 
 Cominciamo con un diagramma UML della classe `Persona` e le sue sottoclassi `Docente` e `Studente`. Nella classe `Persona` abbiamo un attributo `nome` con metodi `get` e `set`, mentre nelle classi `Docente` e `Studente` abbiamo un attributo aggiuntivo, rispettivamente `stipendio` e `matricola`, anch'essi con metodi `get` e `set`.
+
+
+
+
+Quando applichiamo String toString() e String nomeToString() a docenti e studenti nella classe Persona, in base alle regole del Dynamic Binding, viene usato il metodo definito nel tipo più vicino (nel diagramma UML) al tipo esatto. Nel primo caso il metodo usato è quello della sottoclasse Docente o Studente, nel secondo caso è quello della classe Persona.

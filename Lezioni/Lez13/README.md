@@ -15,3 +15,29 @@ In ogni comando Java si chiama "tipo apparente" di una espressione il tipo che q
 Se il programma compila, durante l'esecuzione Java conosce i valori delle variabili di una espressione, e da esse deduce il tipo esatto di un oggetto. Java utilizza il tipo esatto di un oggetto `obj` per decidere quale versione di un metodo applicare all'oggetto (ovvero da quale classe nella gerarchia prendiamo il metodo). Questo meccanismo viene chiamato dynamic binding (perché avviene a run time) o anche, a volte, late binding (perché avviene dopo la compilazione). Tuttavia, la seconda terminologia è meno usata perché si applica anche in altri ambiti dei linguaggi di programmazione. Il dynamic binding è un argomento centrale del corso. Se Java deve chiamare `obj.m(...)` e ci sono diverse versioni sovrascritte di `m(...)`, Java parte dal tipo esatto `C` di `obj` e cerca il metodo `m` nella classe `C`. Se non lo trova, Java cerca il metodo `m` nella classe `D` di cui `C` è estensione, nella classe `E` di cui `D` è estensione e così via. Il primo metodo trovato viene applicato. Dato che il programma compila, sappiamo che c'è almeno una versione del metodo `m` applicabile a `obj`, quella contenuta nel tipo apparente di `obj`. A volte ce ne sono anche altre, e prevale la prima trovata.
 
 Un esempio. Vediamo un esempio di una variabile di tipo `Bottiglia` che, a seconda delle circostanze dell'esecuzione del programma, può avere tipo esatto la classe `Bottiglia` oppure tipo esatto la classe `BottigliaConTappo`, più precisa (ovvero di tipo più piccolo).
+
+
+Upcasting: si “forza” una classe ad essere una sua superclasse. Può essere esplicito, inserendo la superclasse tra parentesi tonde, o implicito.
+
+Esempio
+
+```java
+class Animale{
+    
+}
+public class Mucca extends Animale{
+    public static void main(String[] args) {
+        
+        Animale m = new Mucca();
+        Mucca m1 = new Mucca();
+        //Mucca m = new Animale();// da errore di compilazione
+        
+        Animale a = m;//Animale a = (Animale)m; è la stessa cosa
+        Animale a1 = m1;
+        
+    }
+    
+}
+
+
+Downcasting: casting da una classe a una sottoclasse. E’ possibile solo se l’oggetto, a run-time, è veramente un oggetto della sottoclasse. Questo controllo è eseguito solo run-time, e viene lanciata, in caso di esito negativo, una ClassCastException.

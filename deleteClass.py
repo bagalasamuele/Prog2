@@ -1,14 +1,24 @@
-#Semplice script in Python per cancellare tutti i file .class
+#Semplice script in Python per cancellare tutti i file .class e .DS_Store
 import os
 
-def delete_class_files(directory):
+def delete_files(directory, extensions):
+    deleted_files = []
     for root, dirs, files in os.walk(directory):
         for file in files:
-            if file.endswith(".class"):
+            _, ext = os.path.splitext(file)
+            if ext.lower() in extensions:
                 file_path = os.path.join(root, file)
                 os.remove(file_path)
-                print(f"File eliminato: {file_path}")
+                deleted_files.append(file_path)
+    return deleted_files
 
-directory_path = "/Users/macbookpro/workspaces/Prog2"
+directory = '/Users/macbookpro/workspaces/Prog2'
 #Mettete la vostra Path
-delete_class_files(directory_path)
+
+extensions = ['.class', '.DS_Store']
+
+deleted_files = delete_files(directory, extensions)
+
+print("File eliminati:")
+for file in deleted_files:
+    print(file)

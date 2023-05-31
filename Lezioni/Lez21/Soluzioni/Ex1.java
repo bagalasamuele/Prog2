@@ -13,14 +13,22 @@
 // T=Integer, inComune(p,q) deve restituire i seguenti valori (nel disegno qui
 // sotto numeriamo le posizioni da 0 e abbreviamo “posizione” con “pos.”).
 public class Ex1 {
-    //È obbligatorio definire inComune in modo ricorsivo.
+    // È obbligatorio definire inComune in modo ricorsivo.
     public static <T> boolean inComune(Node<T> p, Node<T> q) {
-        
-        return false;
+        if ((p == null) || (q == null))
+            return false;
+        else{
+            // Versione piu leggibile
+            // T elem1 = p.getElem(); 
+            // T elem2 = q.getElem();
+            // return elem1.equals(elem2) ? true : inComune(p.getNext(), q.getNext());
+            return p.getElem().equals(q.getElem()) ? true : inComune(p.getNext(), q.getNext());
+        }
+            
     }
 
     /*
-     * Main di prova: 
+     * Main di prova:
      */
     public static void main(String[] args) {
         Node<String> p = null, q = null, r = null;
@@ -37,4 +45,3 @@ public class Ex1 {
         System.out.println(" inComune(r,p) = " + inComune(r, p) + "\n");
     }
 }
-

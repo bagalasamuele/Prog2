@@ -12,7 +12,8 @@
 // entrambe le liste p e q nella stessa posizione. Ad esempio, nel caso sia
 // T=Integer, inComune(p,q) deve restituire i seguenti valori (nel disegno qui
 // sotto numeriamo le posizioni da 0 e abbreviamo “posizione” con “pos.”).
-public class Ex1 {
+
+public class Ex1Soluzione {
     // È obbligatorio definire inComune in modo ricorsivo.
     public static <T> boolean inComune(Node<T> p, Node<T> q) {
 

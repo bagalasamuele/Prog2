@@ -1,4 +1,4 @@
-class Esercizio2 {
+class Ex2Soluzione {
     public static void main(String[] args) {
         /*
          * DOM1. Eliminare m2 in B non produce errori nelle classi A,B,C,

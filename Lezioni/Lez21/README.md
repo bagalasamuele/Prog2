@@ -1,6 +1,6 @@
-Lezione 21
+#Lezione 21
 
-Esempi di esercizi di esame con soluzioni
+##Esempi di esercizi di esame con soluzioni
 
 Lezione 21. Forniamo esempi di esercizi di esami degli anni passati per gli argomenti del corso visti finora. Resta un solo argomento da svolgere, le eccezioni. Rimandiamo quest’ultimo argomento alla lezione successiva.
 

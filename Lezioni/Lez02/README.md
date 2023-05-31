@@ -1,7 +1,9 @@
-Lezione 02 
-Attributi e metodi privati, get e set 
+#Lezione 02 
+##Attributi e metodi privati, get e set 
  
- Lezione 02. Parte 1. Un primo esempio di attributi e metodi privati: 
+###Lezione 02. Parte 1. 
+
+Un primo esempio di attributi e metodi privati: 
 la classe Specie (50 minuti). Spesso è conveniente o necessario fornire 
 dei metodi che consentano di accedere ai attributi di una classe. Tali 
 metodi prendono il nome di metodi get (per i metodi che leggono 
@@ -67,10 +69,12 @@ errata dell’area. Trovate la soluzione nel Capitolo 8 del Savich, e in
 queste dispense nella Lezione 03. 
  
  
-(l’area di memoria qui sotto verrà riciclata) 
  
  
- Lezione 02. Parte 2. Un esempio non banale di attributi e metodi 
+###Lezione 02. Parte 2. 
+
+
+Un esempio non banale di attributi e metodi 
 privati: la classe Calcolatrice. (50 minuti). Vediamo ora un esempio 
 non banale di attributi privati: la classe Calcolatrice. Gli elementi 
 della classe sono oggetti calcolatrici tutte uguali, semplici robot 
@@ -150,14 +154,14 @@ lungo per essere simulato nel Visualizer, ma potrete fare eseguire
 
 
 
- o stato della memoria verso la fine del calcolo di 2*3 nella calcolatrice C. 
+Lo stato della memoria verso la fine del calcolo di 2*3 nella calcolatrice C. 
 Abbiamo già calcolato 6=2*3, lo stack della calcolatrice contiene zero valori. Ora 
 stiamo inserendo il risultato 6 nello stack con il comando this.push(6). this 
 indica l’indirizzo dell’oggetto “calcolatrice C” 
-  
+
+```java
 //Un esperimento di uso della classe calcolatrice 
 //Classe eseguibile pubblica, deve stare in CalcolatriceDemo.java 
-```java
 public class CalcolatriceDemo { 
    public static void main(String[] args){ 
     Calcolatrice C = new Calcolatrice(); 

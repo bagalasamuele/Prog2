@@ -1,7 +1,6 @@
-#Lezione 02 
-##Attributi e metodi privati, get e set 
- 
-###Lezione 02. Parte 1. 
+# Lezione 02 ##Attributi e metodi privati, get e set
+
+### Lezione 02. Parte 1.
 
 Un primo esempio di attributi e metodi privati: 
 la classe Specie (50 minuti). Spesso è conveniente o necessario fornire 
@@ -71,7 +70,7 @@ queste dispense nella Lezione 03.
  
  
  
-###Lezione 02. Parte 2. 
+### Lezione 02. Parte 2. 
 
 
 Un esempio non banale di attributi e metodi 

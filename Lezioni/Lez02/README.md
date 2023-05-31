@@ -1,4 +1,6 @@
-# Lezione 02 ##Attributi e metodi privati, get e set
+# Lezione 02 
+
+## Attributi e metodi privati, get e set
 
 ### Lezione 02. Parte 1.
 

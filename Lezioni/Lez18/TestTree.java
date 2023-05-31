@@ -15,12 +15,15 @@ public class TestTree {
         Random r = new Random(); // r = un generatore di numeri casuali
         // Creo un albero t con n reali casuali tra 0 e 1
         int n = 8;
+
         Tree<Double> t = new Leaf<>(); // L'albero t nasce vuoto
         for (int i = 0; i < n; i++)
             t = t.insert(r.nextDouble()); // Accresco t un elem. alla volta
+
         // Provo il metodo di stampa e il calcolo del massimo
         Title("Stampa albero casuale t di " + n + " elementi");
         System.out.println(t + "\n\n t.max() = " + t.max());
+
         // Creo un albero u di interi inserendo sempre elementi piu' grandi
         // quindi sempre a destra
         Tree<Integer> u = new Leaf<>();
@@ -28,6 +31,7 @@ public class TestTree {
             u = u.insert(i);
         Title("Stampa albero u di " + n + " elementi, tutti figli destri");
         System.out.println(u);
+
         // Creo un albero u di stringhe inserendo sempre elementi piu'
         // piccoli
         // quindi sempre a sinistra

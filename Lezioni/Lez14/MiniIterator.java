@@ -1,6 +1,9 @@
 /* MiniIterator.java - Classe che consente di traversare una volta
 sola una lista con un numero "size" di applicazioni di getNext()
 senza rendere pubblici gli indirizzi dei nodi. */
+
+import Ex1.Node;
+
 public class MiniIterator {
     private Node next; // next = prossimo nodo da "visitare"
 

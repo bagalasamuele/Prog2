@@ -1,4 +1,3 @@
-
 public class DynamicStackMax extends DynamicStack {
     private int max;
 

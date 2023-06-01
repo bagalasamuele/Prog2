@@ -1,3 +1,5 @@
+import Ex1.Node;
+
 public class DynamicStack {
     protected Node top;
 

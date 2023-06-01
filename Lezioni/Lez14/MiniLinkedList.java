@@ -1,4 +1,7 @@
 //MiniLinkedList.java
+
+import Ex1.Node;
+
 public class MiniLinkedList {
   private Node first;
   private int size;

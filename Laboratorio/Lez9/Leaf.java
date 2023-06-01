@@ -38,4 +38,12 @@ public class Leaf extends Tree {
     public int depth() {
         return 0;
     }
+
+    public int size() {
+        return 0;
+    }
+
+    public int sum() {
+        return 0;
+    }
 }

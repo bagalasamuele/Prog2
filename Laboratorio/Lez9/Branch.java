@@ -21,15 +21,10 @@ public class Branch extends Tree {
 
     public boolean contains(int x) {
         if (x == elem)
-            // abbiamo trovato l'elemento
             return true;
         else if (x < elem)
-            // siccome x e` piu` piccolo di elem cerchiamo x solo nel
-            // sottoalbero sinistro
             return left.contains(x);
         else
-            // siccome x e` piu` grande di elem cerchiamo x solo nel
-            // sottoalbero destro
             return right.contains(x);
     }
 
@@ -43,33 +38,17 @@ public class Branch extends Tree {
     }
 
     public Tree remove(int x) {
-        if (x == elem) // trovato elemento da eliminare
+        if (x == elem) { // trovato elemento da eliminare
             if (left.empty())
-                // il sottoalbero sinistro e` vuoto, dunque resta il
-                // sottoalbero destro
                 return right;
             else if (right.empty())
-                // il sottoalbero destro e` vuoto, dunque resta il
-                // sottoalbero sinistro
                 return left;
             else {
-                // entrambi i sottoalberi sono non vuoti e dobbiamo
-                // individuare un elemento da collocare alla radice
-                // dell'albero dopo l'eliminazione di elem. Scegliamo
-                // il massimo elemento del sottoalbero sinistro, il
-                // quale sara` per definizione piu` grande di tutti
-                // gli altri elementi del sottoalbero sinistro e, per
-                // la proprieta` degli alberi binari di ricerca, piu`
-                // piccolo di tutti gli elementi nel sottoalbero
-                // destro. In alternativa sarebbe stato possibile
-                // scegliere il minimo elemento del sottoalbero destro
                 elem = left.max();
-                // eliminiamo l'elemento massimo dal sottoalbero
-                // sinistro
                 left = left.remove(elem);
                 return this;
             }
-        else if (x < elem) {
+        } else if (x < elem) {
             // se c'e`, l'elemento da eliminare e` nel sottoalbero
             // sinistro
             left = left.remove(x);
@@ -81,7 +60,7 @@ public class Branch extends Tree {
             return this;
         }
     }
-    
+
     public int depth() {
         return 1 + Math.max(left.depth(), right.depth());
     }
@@ -89,4 +68,38 @@ public class Branch extends Tree {
     public String toString() {
         return "Branch(" + elem + "," + left + "," + right + ")";
     }
+
+    public int size() {
+        int size = 1;
+
+        if (right != null) {
+            size = size + right.size();
+        }
+
+        if (left != null) {
+            size = size + left.size();
+
+        }
+
+        return size;
+    }
+
+    public int sum() {
+        int sum = elem;
+
+        if (right != null) {
+            sum += right.sum();
+        }
+
+        if (left != null) {
+            sum += left.sum();
+        }
+
+        return sum;
+    }
+
+    // public boolean contains(T x) {
+    //     return x.compareTo(elem) == 0 || (right != null && right.contains(x));
+    // }
+
 }

@@ -1,4 +1,7 @@
 //main di prova con l’albero t citato nel testo dell’esercizio
+
+import javax.security.auth.x500.X500Principal;
+
 public class Esercizio1 {
     public static void main(String[] args) {
         Tree<Integer> leaf = new Leaf<>(),
@@ -48,6 +51,14 @@ class Branch<T> extends Tree<T> {
     }
 
     public Tree<T> detach(T x) {
+
+        if ((x == null) && (x == elem) || (x != null) && x.equals(elem))
+            return new Leaf<T>();
+        else {
+            left = left.detach(x);
+            right = right.detach(x);
+            return this;
+        }
 
     }
 }

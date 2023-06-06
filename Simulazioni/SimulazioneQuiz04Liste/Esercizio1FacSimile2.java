@@ -1,4 +1,7 @@
 //Node class, simplified (elem, next are public fields)
+
+import javax.xml.namespace.QName;
+
 class Node {
     public int elem;
     public Node next;
@@ -11,24 +14,38 @@ class Node {
 
 public class Esercizio1FacSimile2 {
     public static Node diff(Node p, Node q) {
-        if (p == null) {
-            return null;
-        }
-    
-        if (q == null) {
+        if (p == null || q == null) {
             return p;
         }
     
-        Node result = diff(p.next, q.next);
+        Node result = null;
+        Node tail = null;
     
-        if (result == null && p.elem == q.elem) {
-            return null;
+        while (p != null) {
+            boolean found = false;
+            Node temp = q;
+    
+            while (temp != null) {
+                if (p.elem == temp.elem) {
+                    found = true;
+                    break;
+                }
+                temp = temp.next;
+            }
+    
+            if (!found) {
+                if (result == null) {
+                    result = tail = new Node(p.elem, null);
+                } else {
+                    tail = tail.next = new Node(p.elem, null);
+                }
+            }
+            p = p.next;
         }
     
-        p.next = result;
-        return p;
-    
+        return result;
     }
+    
 
     // METHODS INCLUDED FOR SOLUTION TESTING ONLY
 

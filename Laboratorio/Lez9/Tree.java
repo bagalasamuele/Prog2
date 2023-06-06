@@ -19,7 +19,7 @@ public abstract class Tree {
 
     public abstract int sum();
 
-    // public abstract boolean contains(int x, int n);
+    public abstract boolean contains(int x, int n);
 
     // public abstract boolean balanced();
 

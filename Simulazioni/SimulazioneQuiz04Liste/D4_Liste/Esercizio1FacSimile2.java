@@ -1,6 +1,6 @@
-//Node class, simplified (elem, next are public fields)
-
-import javax.xml.namespace.QName;
+// Fill the body of the static method diff(p,q). We assume the lists p,q are weakly increasing. diff(p,q) returns a new list: diff(p,q) = p-q = the list p with all elements which are in q removed. Note. The fact that p,q are weakly increasing makes the solution simpler. Recursive solution is simpler than iterative solution.
+// Example: [1,1,1] is weakly increasing and [1,1,1]-[1]=[]. Remark that a single element in q=[1] may remove several elements from p=[1,1,1]. More examples: [1,2,3,4,5,6] - [2,4,6] = [1,3,5], [1,2,3,4,5,6] - [] = [1,2,3,4,5,6], [2,4,6] - [1,2,3,4,5,6] = [].
+// Press the "verify" button of Moodle to check your solution. Do not define your method by cases on tests. If the answer passes all tests send your answer, otherwise remove your mistakes. Usually all tests should be correct for the answer to gain any mark.
 
 class Node {
     public int elem;
@@ -12,7 +12,7 @@ class Node {
     }
 }
 
-//Soluzione Ricorsiva
+// Soluzione Ricorsiva
 public class Esercizio1FacSimile2 {
     public static Node diff(Node p, Node q) {
 
@@ -27,7 +27,25 @@ public class Esercizio1FacSimile2 {
         }
     }
 
-//Soluzione Iterativa
+    // Il ragionamento è:
+
+    // - se p.elem > q.elem: ciò non ci da molte informazioni rilevanti se non che
+    // p.elem potrebbe essere uguale a qualche altro elemento contenuto in q, di
+    // conseguenza avanziamo di 1 su q.
+
+    // - se p.elem == a q.elem: otteniamo un informazione utile, ovvero abbiamo
+    // trovato un nodo da cancellare, di conseguenza ci spostiamo di 1 sul nodo p
+    // "cancellando" tale elemento. Non avanziamo su q, in quanto il prossimo
+    // elemento di p potrebbe essere lo stesso (e quindi andrebbe nuovamente
+    // cancellato).
+
+    // - Se p.elem < q.elem: informazione utilissima in quanto le liste sono
+    // ordinate. Di conseguenza se p.elem è più piccolo di q.elem avanzando su q non
+    // troveremo mai un elemento uguale a p.elem (essendo che gli elementi potrebbe
+    // solo crescere o rimanere uguali). Di conseguenza salviamo questo elemento
+    // facendo "new Node(p.elem,diff(p.next,q))"
+
+    // Soluzione Iterativa
     public static Node diffIterativo(Node p, Node q) {
         if (p == null || q == null) {
             return p;

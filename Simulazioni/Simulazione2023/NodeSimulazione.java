@@ -1,4 +1,3 @@
-package Simulazioni.Simulazione2023.Simulazione2Nodi;
 // Completate il metodo statico public static int contaMinoriUguali(Node p, Node q) in NodeSimulazione, in modo che contaMinoriUguali(p,q) restituisca il numero degli elementi nella sequenza di nodi che inizia in p che sono minori o uguali del corrispondente elemento in q. Non modificate altro che il metodo. Per questo esercizio è molto più facile una soluzione ricorsiva.
 // Esempio.  Se la sequenza che inizia in p ha elementi [1,2,3,4], la sequenza che inizia in q ha elementi [10,2,3,0] allora e contaMinoriUguali(p,q) restituisce 3, dato che per i primi tre elementi di p abbiamo 1<=10, 2<=2, 3<=3, mentre non abbiamo 4<=0. Se le sequenze hanno lunghezza diversa confrontate soltanto le posizioni che hanno in comune.
 // Fate verificare la risposta a Moodle. Non definite il vostro metodo per casi sui test. Se la risposta passa il controllo inviate tutto e terminate, altrimenti correggete gli errori. Normalmente i test devono essere tutti giusti perché la soluzione abbia valore.
@@ -22,10 +21,9 @@ public class NodeSimulazione
        auxQ = auxQ.getNext();
    }
     
-         return elem;//questa risposta e' fasulla cancellatela
- }
+         return elem;
  //FINE DOMANDA
- 
+  }
   
  public static String toString(Node p)
 //Metodo statico di conversione a stringa, perche' siamo fuori di Node

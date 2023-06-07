@@ -12,19 +12,34 @@ class Node {
     }
 }
 
+//Soluzione Ricorsiva
 public class Esercizio1FacSimile2 {
     public static Node diff(Node p, Node q) {
+
+        if ((p == null) || (q == null)) {
+            return p;
+        } else if (p.elem > q.elem) {
+            return diff(p, q.next);
+        } else if (p.elem == q.elem) {
+            return diff(p.next, q);
+        } else {
+            return new Node(p.elem, diff(p.next, q));
+        }
+    }
+
+//Soluzione Iterativa
+    public static Node diffIterativo(Node p, Node q) {
         if (p == null || q == null) {
             return p;
         }
-    
+
         Node result = null;
         Node tail = null;
-    
+
         while (p != null) {
             boolean found = false;
             Node temp = q;
-    
+
             while (temp != null) {
                 if (p.elem == temp.elem) {
                     found = true;
@@ -32,7 +47,7 @@ public class Esercizio1FacSimile2 {
                 }
                 temp = temp.next;
             }
-    
+
             if (!found) {
                 if (result == null) {
                     result = tail = new Node(p.elem, null);
@@ -42,10 +57,9 @@ public class Esercizio1FacSimile2 {
             }
             p = p.next;
         }
-    
+
         return result;
     }
-    
 
     // METHODS INCLUDED FOR SOLUTION TESTING ONLY
 

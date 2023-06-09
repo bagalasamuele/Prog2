@@ -9,7 +9,8 @@ public class main {
         l.insertFirst(3);
         l.insertFirst(4);
         System.out.println(l);
-        l.deleteDispari();
+        // l.deleteDispari();
+        l.detetePari();
         System.out.println(l);
 
     }

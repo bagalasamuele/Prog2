@@ -1,4 +1,3 @@
-// Esercizio Per cancellare nodi 
 public class List {
     private Node first;
 
@@ -22,6 +21,29 @@ public class List {
             s += p.getElem();
         }
         return s;
+    }
+
+    public void deleteNegative() {
+
+    }
+
+    public void detetePari() {
+        Node current = this.first;
+        Node previous = null;
+
+        while (current != null) {
+            if (current.getElem() % 2 == 0) {
+                if (previous == null) {
+                    this.first = current.getNext();
+                } else {
+                    previous.setNext(current.getNext());
+                }
+            } else {
+                previous = current;
+            }
+            current = current.getNext();
+        }
+
     }
 
     // Viene dichiarato il metodo deleteEvenFromList senza un tipo di ritorno (void)

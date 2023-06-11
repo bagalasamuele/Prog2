@@ -1,9 +1,13 @@
 /*
 Esercizio 1
 1.Salvate tutto in un solo file Ex.java. 
-2.Completate il metodo boolean g(T x, T z) in Leaf<T> e Branch<T> in modo che restituisca true se vale (elem minore di x) oppure (elem uguale a z) oppure se g(x,z) restituisce  true sul sottoalbero sinistro oppure sul destro. Altrimenti restituite false. Restituite false sull'albero vuoto. Usate a.compareTo(b) per confrontare a,b in T e supponete che gli elementi dell'albero e x,z non siano null. Usate una definizione ricorsiva. Non modificate altro. Non usate "for" nè "while".
+2.Completate il metodo boolean g(T x, T z) in Leaf<T> e Branch<T> in modo che restituisca true se vale (elem minore di x) 
+oppure (elem uguale a z) oppure se g(x,z) restituisce  true sul sottoalbero sinistro oppure sul destro. Altrimenti restituite false. 
+Restituite false sull'albero vuoto. Usate a.compareTo(b) per confrontare a,b in T e supponete che gli elementi dell'albero e x,z non siano null. Usate una definizione ricorsiva.
+ Non modificate altro. Non usate "for" nè "while".
 3.Eseguite il main della classe Ex come test per la risposta. Non definite il vostro metodo per casi sui test. 
-4.Ricopiate nel Quiz e fate verificare di nuovo le risposte dal Quiz, se passano il controllo del Quiz inviate tutto e terminate, altrimenti correggete gli errori. Normalmente i test devono essere tutti giusti perché la soluzione abbia valore.
+4.Ricopiate nel Quiz e fate verificare di nuovo le risposte dal Quiz,
+ se passano il controllo del Quiz inviate tutto e terminate, altrimenti correggete gli errori. Normalmente i test devono essere tutti giusti perché la soluzione abbia valore.
 */
 
 import java.util.*;
@@ -16,8 +20,9 @@ abstract class Tree<T extends Comparable<T>> {
 }
 
 class Leaf<T extends Comparable<T>> extends Tree<T> {
-    public boolean g(T x, T z) {
 
+    public boolean g(T x, T z) {
+        return false;
     }
 
     public String toString() {
@@ -35,8 +40,21 @@ class Branch<T extends Comparable<T>> extends Tree<T> {
         this.right = right;
     }
 
+    // A mio parere, il metodo non sembra avere una logica chiara. È evidente che
+    // l'università si diverte a creare tracce senza senso solo per confondere gli
+    // studenti. È un esempio lampante del mal insegnamento e delle pessime pratiche
+    // adottate da questo istituto. È frustrante dover affrontare questo tipo di
+    // tracce che non hanno alcuna utilità pratica o scopo educativo. L'università
+    // dovrebbe impegnarsi a fornire tracce significative ed istruttive invece di
+    // sprecare il nostro tempo con assurdità come questa!
+
     public boolean g(T x, T z) {
-        /* INSERT CODE HERE */
+        if ((elem.compareTo(x) < 0) || (elem.compareTo(z) == 0)) {
+            return true;
+        } else if ((left.g(x, z) == true) || (right.g(x, z) == true)) {
+            return true;
+        } else
+            return false;
     }
 
     public String toString() {

@@ -1,7 +1,9 @@
 
 /*
 Esercizio 2
-1.Completate il metodo void f() in List, in modo che f() elimini dalla lista il primo elemento maggiore di zero, se la somma della lista è maggiore di zero (in questo caso siamo certi che esiste almeno un maggiore di zero). Altrimenti f() lascia la lista invariata. Non modificate altro che il metodo. Avete a disposizione un metodo int sum() in List per sommare gli elementi di una lista: non dovete definirlo voi. Ricordatevi: per "eliminare" un nodo p diverso dal primo, usate setNext far puntare il nodo precedente al nodo p al nodo successivo al nodo p.
+1.Completate il metodo void f() in List, in modo che f() elimini dalla lista il primo elemento maggiore di zero, se la somma della lista è maggiore di zero (in questo caso siamo certi che esiste almeno un maggiore di zero).
+Altrimenti f() lascia la lista invariata. Non modificate altro che il metodo. Avete a disposizione un metodo int sum() in List per sommare gli elementi di una lista: non dovete definirlo voi. 
+Ricordatevi: per "eliminare" un nodo p diverso dal primo, usate setNext far puntare il nodo precedente al nodo p al nodo successivo al nodo p.
 2.Fate verificare la risposta a Moodle. Non definite il vostro metodo per casi sui test. Se la risposta passa il controllo inviate tutto e terminate, altrimenti correggete gli errori. Normalmente i test devono essere tutti giusti perché la soluzione abbia valore.
 */
 
@@ -66,7 +68,27 @@ class List {
     }
 
   public void f(){
-//INSERT CODE HERE
+    Node aux = first;
+    Node prev = null;
+   if( sum() >= 0){
+  
+    while ( aux != null){
+      if(first.getElem() > 0){
+        first = aux.getNext();
+      }
+      else if( prev != null && aux.getElem() > 0 ){
+        prev.setNext(aux.getNext());
+        break;
+      }
+      else{
+        prev = aux;
+      }
+
+      aux = aux.getNext();
+    }
+
+ 
+   }
  }
  
   public void insertFirst(int elem){

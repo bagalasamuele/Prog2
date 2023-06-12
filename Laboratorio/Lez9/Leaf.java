@@ -20,6 +20,10 @@ public class Leaf extends Tree {
     public boolean contains(int x) {
         return false;
     }
+    
+    public boolean contains(int x, int n){
+        return false;
+    }
 
     public Tree insert(int x) {
         return new Branch(x, this, this);
@@ -46,4 +50,6 @@ public class Leaf extends Tree {
     public int sum() {
         return 0;
     }
+
+
 }

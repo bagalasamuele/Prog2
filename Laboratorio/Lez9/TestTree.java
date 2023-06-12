@@ -27,8 +27,8 @@ public class TestTree {
         System.out.println("t.sum() = " + t.sum());
         System.out.println("t.size() = " + t.size());
         // System.out.println("t.empty() = " + t.empty());
-        // System.out.println("t.max() = " + t.max());
-        // System.out.println("t.contains(6) = " + t.contains(6));
+        System.out.println("t.max() = " + t.max());
+        System.out.println("t.contains(6) = " + t.contains(6));
         // System.out.println("t.depth() = " + t.depth());
         // aggiungere le chiamate ai metodi da implementare
 

@@ -16,17 +16,25 @@ public class Branch extends Tree {
     }
 
     public int max() {
-        return right.empty() ? elem : right.max();
+        if(right.empty() == true)
+            return elem;
+        else 
+            return right.max(); 
     }
 
     public boolean contains(int x) {
-        if (x == elem)
+        if (elem == x)
             return true;
-        else if (x < elem)
+        if ( x < elem )
             return left.contains(x);
-        else
+        else 
             return right.contains(x);
     }
+
+    public boolean contains(int x, int n){
+        return false;
+    }
+
 
     public Tree insert(int x) {
         if (x < elem)
@@ -70,36 +78,15 @@ public class Branch extends Tree {
     }
 
     public int size() {
-        int size = 1;
-
-        if (right != null) {
-            size = size + right.size();
-        }
-
-        if (left != null) {
-            size = size + left.size();
-
-        }
-
-        return size;
+        return (left.size() + right.size())+1;
     }
 
     public int sum() {
-        int sum = elem;
-
-        if (right != null) {
-            sum += right.sum();
-        }
-
-        if (left != null) {
-            sum += left.sum();
-        }
-
-        return sum;
+        return (left.sum() + right.sum())+ elem;
     }
 
     // public boolean contains(T x) {
-    //     return x.compareTo(elem) == 0 || (right != null && right.contains(x));
+    // return x.compareTo(elem) == 0 || (right != null && right.contains(x));
     // }
 
 }

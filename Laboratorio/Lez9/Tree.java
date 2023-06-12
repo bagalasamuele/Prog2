@@ -25,5 +25,6 @@ public abstract class Tree {
 
     // public abstract Tree filter(int x);
 
-    // public abstract int get(int i);
+    
+    public abstract int get(int i);
 }

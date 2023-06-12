@@ -33,15 +33,26 @@ public class Leaf extends Tree {
         return this;
     }
 
+    public boolean balanced() {
+        return false;}
     // realizziamo anche un metodo toString per stampare un albero
     // binario sul terminale
     public String toString() {
         return "Leaf";
     }
 
+    protected String toStringAux(String prefix, String root, String left, String right) {
+        return prefix + root + "leaf";
+    }
+
     public int depth() {
         return 0;
     }
+
+    public int get(int i){
+        return 0;
+    }
+    
 
     public int size() {
         return 0;

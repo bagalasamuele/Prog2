@@ -24,6 +24,7 @@ public class Branch<T extends Comparable<T>> extends Tree<T> {
         return false;
     }
 
+
     /*
      * Per fare i confronti usiamo il metodo compareTo(), in modo da avere un
      * confronto generale per tutti i T che implementano l'interfaccia Comparable<T>

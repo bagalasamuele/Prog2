@@ -30,6 +30,8 @@ public class TestTree {
         System.out.println("t.max() = " + t.max());
         System.out.println("t.contains(6) = " + t.contains(6));
         // System.out.println("t.depth() = " + t.depth());
+        System.out.println("t.get(2) = " + t.get(2));
+
         // aggiungere le chiamate ai metodi da implementare
 
     }

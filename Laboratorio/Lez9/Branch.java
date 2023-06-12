@@ -31,10 +31,13 @@ public class Branch extends Tree {
             return right.contains(x);
     }
 
+    public boolean balanced() {
+        return Math.max(left.depth(), right.depth()) <= 1 ? true : false;
+    }
+
     public boolean contains(int x, int n){
         return false;
     }
-
 
     public Tree insert(int x) {
         if (x < elem)
@@ -45,29 +48,6 @@ public class Branch extends Tree {
         return this;
     }
 
-    public Tree remove(int x) {
-        if (x == elem) { // trovato elemento da eliminare
-            if (left.empty())
-                return right;
-            else if (right.empty())
-                return left;
-            else {
-                elem = left.max();
-                left = left.remove(elem);
-                return this;
-            }
-        } else if (x < elem) {
-            // se c'e`, l'elemento da eliminare e` nel sottoalbero
-            // sinistro
-            left = left.remove(x);
-            return this;
-        } else {
-            // se c'e`, l'elemento da eliminare e` nel sottoalbero
-            // destro
-            right = right.remove(x);
-            return this;
-        }
-    }
 
     public int depth() {
         return 1 + Math.max(left.depth(), right.depth());
@@ -85,6 +65,20 @@ public class Branch extends Tree {
         return (left.sum() + right.sum())+ elem;
     }
 
+    public Tree remove(int x){
+    
+        return this;
+    }
+
+    public int get(int i) {
+        int l = left.size();
+        if (i < l) return left.get(i);
+        else if (i == l) return elem;
+        else return right.get(i - l - 1);
+    }
+        
+
+ 
     // public boolean contains(T x) {
     // return x.compareTo(elem) == 0 || (right != null && right.contains(x));
     // }
